@@ -1,0 +1,24 @@
+@import "../variables.scss";
+
+#home {
+    .search-section {
+        margin: 100px;
+
+        .search-box {
+            width: 50%;
+            margin: 0 auto;
+            box-shadow: $lightShadow;
+            border-radius: 5px;
+            padding: 25px 30px;
+            background-color: $mainWhite;
+            
+            input {
+                width: 100%;
+                padding: 10px 12px;
+                border-radius: 5px;
+                border: transparent;
+                background-color: $mainBackground;
+            }
+        }
+    }
+}

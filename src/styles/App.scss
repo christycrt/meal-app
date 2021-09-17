@@ -1,0 +1,14 @@
+@import "./variables.scss";
+@import "./common/Navbar.scss";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.App {
+    font-family: 'Montserrat', sans-serif;
+    min-height: 100vh;
+    background-color: $mainBackground;
+}

@@ -1,0 +1,30 @@
+#navbar {
+    height: 80px;
+    background-color: $mainWhite;
+
+    .nav-list {
+        width: 85vw;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0 auto;
+        height: 100%;
+        
+
+        ul {
+            margin-bottom: 0;
+
+            li {
+                list-style-type: none;
+                display: inline-block;
+                padding: 8px 15px;
+            }
+
+            .login {
+                border: 2px solid #000000;
+                border-radius: 25px;
+                margin-left: 15px;
+            }
+        }
+    }
+}
