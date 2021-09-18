@@ -3,7 +3,6 @@ import MealCard from "./MealCard";
 function Meal({ mealList }) {
   return (
     <section id="meal">
-      <h1 className="meal-title">Meal</h1>
       {mealList ? (
         <div className="row">
           {mealList.map((item, key) => {
@@ -15,9 +14,7 @@ function Meal({ mealList }) {
           })}
         </div>
       ) : (
-        <h2 className="no-match-text">
-          no meals matched your search criteria
-        </h2>
+        <h2 className="no-match-text">no meals matched your search criteria</h2>
       )}
     </section>
   );
