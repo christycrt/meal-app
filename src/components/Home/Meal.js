@@ -1,19 +1,17 @@
 import MealCard from "./MealCard";
 
-function Meal() {
+function Meal({ mealList }) {
   return (
     <section id="meal">
       <h1 className="meal-title">Meal</h1>
       <div className="row">
-        <div className="col-4">
-          <MealCard />
-        </div>
-        <div className="col-4">
-          <MealCard />
-        </div>
-        <div className="col-4">
-          <MealCard />
-        </div>
+        {mealList.map((item, key) => {
+          return (
+            <div key={key} className="col-4">
+              <MealCard item={item} />
+            </div>
+          );
+        })}
       </div>
     </section>
   );
