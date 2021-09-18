@@ -7,11 +7,12 @@ import axios from "axios";
 
 function Home() {
   const [mealList, setMealList] = useState([]);
+  const [searchMeal, setSearchMeal] = useState("");
 
   useEffect(() => {
     let fetchMeal = setTimeout(() => {
       axios
-        .get("https://www.themealdb.com/api/json/v1/1/search.php?s=")
+        .get(`https://www.themealdb.com/api/json/v1/1/search.php?s=${searchMeal}`)
         .then(function (response) {
           // handle success
           console.log(response.data.meals);
@@ -21,12 +22,12 @@ function Home() {
     return () => {
       clearTimeout(fetchMeal);
     };
-  }, []);
+  }, [searchMeal]);
 
   return (
     <div id="home">
       <Navbar />
-      <Searchbox />
+      <Searchbox searchMeal={{ searchMeal, setSearchMeal }} />
       <Meal mealList={mealList} />
     </div>
   );
