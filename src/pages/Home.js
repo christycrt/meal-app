@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import Navbar from "../components/common/Navbar";
 import Meal from "../components/Home/Meal";
 import Searchbox from "../components/Home/Searchbox";
 import "../styles/pages/Home.scss";
@@ -32,7 +31,6 @@ function Home() {
 
   return (
     <div id="home">
-      <Navbar />
       <Searchbox searchMeal={{ searchMeal, setSearchMeal }} />
       <h1 className="meal-title">Meal</h1>
       {loading ? (

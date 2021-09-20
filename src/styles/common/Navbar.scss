@@ -9,15 +9,24 @@
         align-items: center;
         margin: 0 auto;
         height: 100%;
-        
 
         ul {
             margin-bottom: 0;
 
-            li {
-                list-style-type: none;
-                display: inline-block;
-                padding: 8px 15px;
+            a {
+                color: #000000;
+                transition: 0.5s;
+
+                li {
+                    list-style-type: none;
+                    display: inline-block;
+                    padding: 8px 15px;
+                }
+
+                &:hover {
+                    color: #6b6b6b;
+                    transition: 0.5s;
+                }
             }
 
             .login {
