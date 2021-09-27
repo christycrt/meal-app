@@ -1,6 +1,10 @@
 import { Link } from "react-router-dom";
+import { useState } from "react/cjs/react.development";
+import Modal from "./Modal";
 
 function Navbar() {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
   return (
     <nav id="navbar">
       <div className="nav-list">
@@ -14,9 +18,16 @@ function Navbar() {
           <Link to="/about">
             <li>About</li>
           </Link>
-          <Link>
-            <li className="login">Log in</li>
-          </Link>
+          <li
+            className="login"
+            onClick={() => {
+              setIsModalOpen(true);
+              document.body.style.overflowY = "hidden";
+            }}
+          >
+            Log in
+          </li>
+          {isModalOpen && <Modal setIsModalOpen={setIsModalOpen} />}
         </ul>
       </div>
     </nav>
