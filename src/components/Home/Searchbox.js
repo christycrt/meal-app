@@ -3,6 +3,7 @@ function Searchbox({ searchMeal }) {
     <section className="search-section">
       <form className="search-box">
         <input
+          type="text"
           placeholder="Search for a Meal..."
           value={searchMeal.searchMeal}
           onChange={(e) => {
