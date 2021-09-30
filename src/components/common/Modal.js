@@ -1,15 +1,19 @@
 import { FaTimes } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
-function Modal({ setIsModalOpen }) {
+function Modal({ modal }) {
   return (
     <section id="modal">
-      <div className="overlay-modal" onClick={() => setIsModalOpen(false)} />
+      <div
+        className="overlay-modal"
+        onClick={() => modal.setIsModalOpen(false)}
+      />
       <div className="modal-box">
         <div className="close-btn-wrapper">
           <button
             className="close-btn"
             onClick={() => {
-              setIsModalOpen(false);
+              modal.setIsModalOpen(false);
               document.body.style.overflowY = "auto";
             }}
           >
@@ -31,6 +35,20 @@ function Modal({ setIsModalOpen }) {
           </div>
           <input type="submit" className="login-btn" value="Log in" />
         </form>
+        <p className="signup-text">
+          Don't have an account yet?{" "}
+          <Link to="#">
+            <a
+              href="#"
+              onClick={() => {
+                modal.setIsModalSignupOpen(true);
+                modal.setIsModalOpen(false);
+              }}
+            >
+              Sign up
+            </a>
+          </Link>
+        </p>
       </div>
     </section>
   );
