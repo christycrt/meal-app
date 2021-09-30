@@ -1,0 +1,83 @@
+@import "../variables.scss";
+
+#modal {
+    .overlay-modal {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(0, 0, 0, 0.7);
+        z-index: 1000;
+    }
+
+    .modal-box {
+        width: 350px;
+        box-shadow: $lightShadow;
+        border-radius: 5px;
+        background-color: $mainWhite;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        padding: 25px;
+        z-index: 1000;
+
+        .close-btn-wrapper {
+            display: flex;
+            justify-content: right;
+
+            .close-btn {
+                background-color: transparent;
+                border: none;
+            }
+        }
+
+        .login-text {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .form-login {
+            .input-section {
+                margin-bottom: 15px;
+            }
+
+            label {
+                display: block;
+                margin-bottom: 8px;
+            }
+
+            input {
+                display: block;
+                width: 100%;
+                font-size: 16px;
+                padding: 5px;
+                margin-bottom: 10px;
+            }
+
+            .login-btn {
+                display: block;
+                width: 100%;
+                padding: 8px;
+                color: $mainWhite;
+                background-color: black;
+                border-radius: 5px;
+                border: none;
+                transition: 0.5s;
+                margin-bottom: 15px;
+
+                &:hover {
+                    background-color: #6b6b6b;
+                    transition: 0.5s;
+                }
+            }
+        }
+
+        .signup-text {
+            text-align: center;
+            font-size: 14px;
+            margin-bottom: 0;
+        }
+    }
+}

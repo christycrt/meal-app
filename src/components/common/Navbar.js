@@ -1,9 +1,11 @@
 import { Link } from "react-router-dom";
 import { useState } from "react/cjs/react.development";
 import Modal from "./Modal";
+import ModalSignup from "./ModalSignup";
 
 function Navbar() {
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [isModalSignupOpen, setIsModalSignupOpen] = useState(false);
 
   return (
     <nav id="navbar">
@@ -27,7 +29,12 @@ function Navbar() {
           >
             Log in
           </li>
-          {isModalOpen && <Modal setIsModalOpen={setIsModalOpen} />}
+          {isModalOpen && (
+            <Modal modal={{ setIsModalOpen, setIsModalSignupOpen }} />
+          )}
+          {isModalSignupOpen && (
+            <ModalSignup setIsModalSignupOpen={setIsModalSignupOpen} />
+          )}
         </ul>
       </div>
     </nav>
